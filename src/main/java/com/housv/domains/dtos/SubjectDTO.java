@@ -1,4 +1,4 @@
-package com.housv.domains.entities;
+package com.housv.domains.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,15 +9,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Table
-public class Standard extends BaseEntity<Long>{
+public class SubjectDTO extends IdDTO {
     @Column(name = "name")
     private String name;
-    @Column(name = "image")
-    private String image;
 }

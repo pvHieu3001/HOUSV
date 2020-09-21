@@ -25,6 +25,17 @@ import java.util.List;
 @Table
 public class User extends BaseEntity<Long>{
 
+  public User(User user) {
+    this.username = user.getUsername();
+    this.password = user.getPassword();
+    this.email = user.getEmail();
+    this.enabled = user.isEnabled();
+    this.accountNonExpired = user.isAccountNonExpired();
+    this.credentialsNonExpired = user.isCredentialsNonExpired();
+    this.accountNonLocked = user.isAccountNonLocked();
+    this.roles = user.getRoles();
+  }
+
   @Column(nullable = false)
   private String username;
   @Column(nullable = false)
@@ -42,9 +53,9 @@ public class User extends BaseEntity<Long>{
 
   @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE,
       CascadeType.REFRESH})
-  @JoinTable(name = "user_role", joinColumns = {@JoinColumn(name = "account_id")},
+  @JoinTable(name = "role_user", joinColumns = {@JoinColumn(name = "user_id")},
       inverseJoinColumns = {@JoinColumn(name = "role_id")})
-  private List<Role> roleList;
+  private List<Role> roles;
 
 
 }

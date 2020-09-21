@@ -27,5 +27,11 @@ public class Role extends BaseEntity<Long>{
     private String name;
 
     @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
-    private List<User> userList;
+    private List<User> users;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "permission_role", joinColumns = {
+            @JoinColumn(name = "role_id", referencedColumnName = "id")}, inverseJoinColumns = {
+            @JoinColumn(name = "permission_id", referencedColumnName = "id")})
+    private List<Permission> permissions;
 }
