@@ -31,8 +31,14 @@ public class User extends BaseEntity<Long>{
   private String password;
   @Column(nullable = false)
   private String email;
-  @Column(nullable = false)
-  private Integer status;
+  @Column(name = "enabled")
+  private boolean enabled;
+  @Column(name = "accountNonExpired")
+  private boolean accountNonExpired;
+  @Column(name = "credentialsNonExpired")
+  private boolean credentialsNonExpired;
+  @Column(name = "accountNonLocked")
+  private boolean accountNonLocked;
 
   @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE,
       CascadeType.REFRESH})
