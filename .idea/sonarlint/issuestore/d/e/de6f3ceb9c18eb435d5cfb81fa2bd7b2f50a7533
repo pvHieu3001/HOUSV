@@ -1,0 +1,23 @@
+
+<
+java:S1452-"&Remove usage of generic wildcard type.(–„Υ
+<
+java:S1452!"&Remove usage of generic wildcard type.(ξΨ°
+^	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(²ιµρ
+o
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(Οάγ¥
+<
+java:S1452'"&Remove usage of generic wildcard type.(θΰ„ρ
+T
+java:S1610">Convert the abstract class "BaseController" into an interface.(²ιµρ
+o
+java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(Οάγ¥
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(άε”ύÿÿÿÿ
+A
+java:S1452"&Remove usage of generic wildcard type.(Ασ‰κύÿÿÿÿ
+<
+java:S1452"&Remove usage of generic wildcard type.(ρ’ψ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Οάγ¥
+^	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(²ιµρ

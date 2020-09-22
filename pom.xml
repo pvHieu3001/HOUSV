@@ -69,6 +69,17 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-security</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-gcp-starter</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -88,6 +99,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <project>lexical-micron-290308 </project>
+                    <deploy.promote>true</deploy.promote>
+                    <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
